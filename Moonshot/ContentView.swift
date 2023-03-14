@@ -36,6 +36,7 @@ struct ContentView: View {
                         Label("Show as grid", systemImage: "square.grid.2x2")
                     }
                 }
+				.padding()
             }
             .navigationTitle("🌖Moonshot🚀")
             .background(.darkBackground)

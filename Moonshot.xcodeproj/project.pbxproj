@@ -22,7 +22,6 @@
 		64BC572B28C8FC8E00FF758D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BC572A28C8FC8E00FF758D /* ContentView.swift */; };
 		64BC572D28C8FC9000FF758D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64BC572C28C8FC9000FF758D /* Assets.xcassets */; };
 		64BC573028C8FC9000FF758D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64BC572F28C8FC9000FF758D /* Preview Assets.xcassets */; };
-		64CEF6AB29152D3300A6691E /* missions.json in Resources */ = {isa = PBXBuildFile; fileRef = 64CEF6AA29152D3300A6691E /* missions.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,12 +36,12 @@
 		6434CE7828CF935A00075CBC /* ListLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListLayout.swift; sourceTree = "<group>"; };
 		6452792628CE3159000C2C1E /* MissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionView.swift; sourceTree = "<group>"; };
 		6452792828CE3F62000C2C1E /* AstronautView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronautView.swift; sourceTree = "<group>"; };
+		648D8BDD29C1014500C76ACF /* missions.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = missions.json; sourceTree = "<group>"; };
 		64BC572528C8FC8E00FF758D /* Moonshot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Moonshot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		64BC572828C8FC8E00FF758D /* MoonshotApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoonshotApp.swift; sourceTree = "<group>"; };
 		64BC572A28C8FC8E00FF758D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		64BC572C28C8FC9000FF758D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		64BC572F28C8FC9000FF758D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		64CEF6AA29152D3300A6691E /* missions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = missions.json; path = "../../Moonshot files/missions.json"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +55,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		648D8BD929C1004800C76ACF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6452792628CE3159000C2C1E /* MissionView.swift */,
+				6434CE7428CF90C500075CBC /* CrewRosterView.swift */,
+				6434CE7228CF900700075CBC /* CustomDivider.swift */,
+				6434CE7628CF927600075CBC /* GridLayout.swift */,
+				6434CE7828CF935A00075CBC /* ListLayout.swift */,
+				6452792828CE3F62000C2C1E /* AstronautView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		648D8BDA29C1007A00C76ACF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				640E6EC528CD148800D6B7FC /* Color-Theme.swift */,
+				6428988D28CA5C2200B3AB62 /* Bundle-Decodable.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		648D8BDB29C1012000C76ACF /* Data Models */ = {
+			isa = PBXGroup;
+			children = (
+				6428988B28CA5B9400B3AB62 /* Astronaut.swift */,
+				6428988F28CA602500B3AB62 /* Mission.swift */,
+			);
+			path = "Data Models";
+			sourceTree = "<group>";
+		};
+		648D8BDC29C1013300C76ACF /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				6428988728CA54D400B3AB62 /* astronauts.json */,
+				648D8BDD29C1014500C76ACF /* missions.json */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
 		64BC571C28C8FC8E00FF758D = {
 			isa = PBXGroup;
 			children = (
@@ -77,18 +116,10 @@
 			children = (
 				64BC572828C8FC8E00FF758D /* MoonshotApp.swift */,
 				64BC572A28C8FC8E00FF758D /* ContentView.swift */,
-				6434CE7628CF927600075CBC /* GridLayout.swift */,
-				6434CE7828CF935A00075CBC /* ListLayout.swift */,
-				6452792628CE3159000C2C1E /* MissionView.swift */,
-				6434CE7428CF90C500075CBC /* CrewRosterView.swift */,
-				6434CE7228CF900700075CBC /* CustomDivider.swift */,
-				6452792828CE3F62000C2C1E /* AstronautView.swift */,
-				6428988B28CA5B9400B3AB62 /* Astronaut.swift */,
-				6428988F28CA602500B3AB62 /* Mission.swift */,
-				6428988D28CA5C2200B3AB62 /* Bundle-Decodable.swift */,
-				640E6EC528CD148800D6B7FC /* Color-Theme.swift */,
-				6428988728CA54D400B3AB62 /* astronauts.json */,
-				64CEF6AA29152D3300A6691E /* missions.json */,
+				648D8BD929C1004800C76ACF /* Views */,
+				648D8BDA29C1007A00C76ACF /* Extensions */,
+				648D8BDB29C1012000C76ACF /* Data Models */,
+				648D8BDC29C1013300C76ACF /* JSON */,
 				64BC572C28C8FC9000FF758D /* Assets.xcassets */,
 				64BC572E28C8FC9000FF758D /* Preview Content */,
 			);
@@ -162,7 +193,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				6428988828CA54D400B3AB62 /* astronauts.json in Resources */,
-				64CEF6AB29152D3300A6691E /* missions.json in Resources */,
 				64BC573028C8FC9000FF758D /* Preview Assets.xcassets in Resources */,
 				64BC572D28C8FC9000FF758D /* Assets.xcassets in Resources */,
 			);
@@ -243,7 +273,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -297,7 +327,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -318,11 +348,13 @@
 				DEVELOPMENT_TEAM = N8877H53MP;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -330,9 +362,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lefthandedapps.Moonshot;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -347,11 +382,13 @@
 				DEVELOPMENT_TEAM = N8877H53MP;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -359,9 +396,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lefthandedapps.Moonshot;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
