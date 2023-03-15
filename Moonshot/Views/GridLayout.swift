@@ -9,9 +9,7 @@ import SwiftUI
 
 struct GridLayout: View {
     let astronauts: [String: Astronaut]
-    
     let missions: [Mission]
-    
     let columns = [
         GridItem(.adaptive(minimum: 150))
     ]
@@ -28,12 +26,10 @@ struct GridLayout: View {
                                 .scaledToFit()
                                 .frame(width: 100, height: 100)
                                 .padding()
-                            
                             VStack {
                                 Text(mission.displayName)
                                     .font(.headline)
                                     .foregroundColor(.white)
-                                
                                 Text(mission.formattedLaunchDate)
                                     .font(.caption)
                                     .foregroundColor(.white.opacity(0.5))

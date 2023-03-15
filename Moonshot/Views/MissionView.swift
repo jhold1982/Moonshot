@@ -19,18 +19,14 @@ struct MissionView: View {
         GeometryReader { geometry in
             ScrollView {
                 VStack {
-                    
                     Image(mission.image)
                         .resizable()
                         .scaledToFit()
                         .frame(maxWidth: geometry.size.width * 0.6)
                         .padding(.vertical)
-                    
                     if let date = mission.launchDate {
                         Label(date.formatted(date: .complete, time: .omitted), systemImage: "calendar")
                     }
-                    
-                    
                     VStack(alignment: .leading) {
                         CustomDivider()
                         Text("Mission Highlights")
@@ -42,10 +38,7 @@ struct MissionView: View {
                             .font(.title.bold())
                             .padding()
                     }
-                    
                     .padding(.horizontal)
-                    
-                    
                     CrewRosterView(crew: crew)
                 }
                 .padding(.bottom)
@@ -57,7 +50,6 @@ struct MissionView: View {
     }
     init(mission: Mission, astronauts: [String: Astronaut]) {
         self.mission = mission
-        
         self.crew = mission.crew.map { member in
             if let astronaut = astronauts[member.name] {
                 return CrewMember(role: member.role, astronaut: astronaut)

@@ -11,15 +11,12 @@ struct CrewRosterView: View {
     let crew: [MissionView.CrewMember]
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
-            
             HStack {
-                
                 ForEach(crew, id: \.role) { crewMember in
                     NavigationLink {
                         AstronautView(astronaut: crewMember.astronaut)
                     } label: {
                         HStack {
-                            
                             Image(crewMember.astronaut.id)
                                 .resizable()
                                 .frame(width: 104, height: 72)
@@ -32,7 +29,10 @@ struct CrewRosterView: View {
                                 Text(crewMember.astronaut.name)
                                     .foregroundColor(.white)
                                     .font(.headline)
-                                    .accessibilityLabel(crewMember.astronaut.name.replacingOccurrences(of: ".", with: " "))
+                                    .accessibilityLabel(crewMember.astronaut.name.replacingOccurrences(
+										of: ".",
+										with: " ")
+									)
                                 Text(crewMember.role)
                                     .foregroundColor(.secondary)
                             }

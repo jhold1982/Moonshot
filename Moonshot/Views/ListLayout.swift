@@ -9,9 +9,7 @@ import SwiftUI
 
 struct ListLayout: View {
     let astronauts: [String: Astronaut]
-    
     let missions: [Mission]
-    
     var body: some View {
         List(missions) { mission in
             NavigationLink {
@@ -23,12 +21,10 @@ struct ListLayout: View {
                         .scaledToFit()
                         .frame(width: 40, height: 40)
                         .padding()
-                    
                     VStack(alignment: .leading) {
                         Text(mission.displayName)
                             .font(.headline)
                         Text(mission.formattedLaunchDate)
-                        
                     }
                 }
             }
